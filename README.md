@@ -12,6 +12,7 @@ could be ( getting progressively harder):
 
 ## favourites UI
 
+
 3 wire up the favourites UI component to display favourited items
 
 4 add ratings functionality to favourited items
