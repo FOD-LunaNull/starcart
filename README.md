@@ -61,9 +61,7 @@ $rm -rf node_modules
 
 $npm i $npm start
 
-# If for some reason you can’t get the app to spin up then just have a go using ‘ npx create-react-app’ at hitting some of the endpoints, mapping the data and displaying the results as best you can.
-
-# And rather than struggle with something, just email stefan.ingolfsson@fodmobilitygroup.com and I’ll get back to you.
+If for some reason you can’t get the app to spin up then just have a go using ‘ npx create-react-app’ at hitting some of the endpoints, mapping the data and displaying the results as best you can.
 
     -- You are advised to have VS Code, Redux dev tools, Eslint, Prettier, VS Code Chrome Debugger Extensions installed
 
