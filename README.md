@@ -1,14 +1,14 @@
-## StarCart
+# StarCart
 
 The idea is that a user can search for star wars related stuff, films, people, planets, vehicles, starships. At the moment, the default is
-to fetch films. you can toggle results, but there's no results yet for characters ( or any of the others ), so some ideas for improvments
+to fetch films. you can toggle results, but there's no results yet for characters ( or any of the others ), so some ideas for improvements
 could be ( getting progressively harder):
 
-## extend current fuctionality
+## extend current functionality
 
 1 wire up the endpoint to display the results for characters just like the films components work.
 
-2 we need pagination also for the results - luckily the json provides a next and previous and a total count of items
+2 we need pagination also for the results - luckily the JSON provides a next and previous and a total count of items
 
 ## favourites UI
 
@@ -19,15 +19,15 @@ could be ( getting progressively harder):
 
 5 add sorting of favourites by rating
 
-6 add filters eg type / 1-star 2-star 3-start
+6 add filters eg type / 1-star 2-star 3-star
 
-# state
+## state
 
-7 add a 'remove favouries' button which removes that item from the favourites state slice
+7 add a **remove favourites button** which removes that item from the favourites state slice
 
-8 add a new state slice for a shopping cart with methods to add, remove, edit items
+8 add a **new state** slice for a **shopping cart** with methods to add, remove, edit items
 
-9 add new RTKQuery API end points for 'vehicles' and 'planets' to services https://swapi.dev/documentation
+9 add new RTKQuery API end points for `vehicles` and `planets` to services https://swapi.dev/documentation
 
 ## performance
 
@@ -35,30 +35,39 @@ could be ( getting progressively harder):
 
 10 add unit tests to key components
 
-12 refactor for peformance and to optimise component rerenders
+12 refactor for performance and to optimise component rerenders
 
-=========== TECH STACK / GETTING STARTED ============
+# TECH STACK / GETTING STARTED
 
-# install vscode git with git bash for windows ( if windows ) / bash
+## install vscode git with git bash for windows ( if windows ) / bash
 
-# install nvm and or node to get the latest version of nodejs 'lts' version
+## install nvm and or node to get the latest version of nodejs 'lts' version
 
-$ nvm install lts $ nvm use 16.14.0 $ npm install -g npm@8.5.4
+```bash
+nvm install lts
+nvm use 16.14.0
+npm install -g npm@8.5.4
+```
 
-# fork repo https://github.com/sjingoFOD/starcart
+## fork repo https://github.com/sjingoFOD/starcart
 
-# install the packages and dependencies and start the app
+## install the packages and dependencies and start the app
 
-$npm i     
-$npm start
+```bash
+npm ci     
+npm start
+```
 
 \*\*\* sometimes npm can be buggy, if you need to reinstall packages to clear any errors, then try the following command :
 
-$rm -rf node_modules
+```bash
+rm -rf node_modules
 
-$npm i $npm start
+npm cii
+npm start
+```
 
-# If for some reason you can’t get the app to spin up then just have a go using ‘ npx create-react-app’ at hitting some of the endpoints, mapping the data and displaying the results as best you can.
+## If for some reason you can’t get the app to spin up then just have a go using ‘ npx create-react-app’ at hitting some of the endpoints, mapping the data and displaying the results as best you can.
 
 # And rather than struggle with something, just email stefan.ingolfsson@fodmobilitygroup.com and I’ll get back to you.
 
