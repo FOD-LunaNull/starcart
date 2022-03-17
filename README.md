@@ -1,6 +1,6 @@
 ## StarCart
 
-The idea is that a user can search for star wars related stuff, films, people, planets, vehicles, starships. At the moment, the default is
+The idea is that a user create a collection of their favourite star wars related stuff: films, people, planets, vehicles, starships. At the moment, the default is
 to fetch films. you can toggle results, but there's no results yet for characters ( or any of the others ), so some ideas for improvments
 could be ( getting progressively harder):
 
