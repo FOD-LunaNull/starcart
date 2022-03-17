@@ -12,7 +12,6 @@ export const store = configureStore({
 		film: filmSlice.reducer,
 		faves: favesSlice.reducer,
 		app: appSlice.reducer,
-		// [swapiApi.reducerPath]: swapiApi.reducer,
 		[swapApi.reducerPath]: swapApi.reducer,
 	},
 	middleware: getDefaultMiddleware => getDefaultMiddleware().concat(swapApi.middleware),

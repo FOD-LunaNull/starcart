@@ -33,7 +33,13 @@ const Films = () => {
 						</Card.Content>
 						<Card.Content extra>
 							<FilmDetails details={film} />
-							<Button data-title={film.title} positive content="Add to favourites" onClick={addToFavourites} />
+							<Button
+								icon={{ name: 'plus', size: 'small' }}
+								data-title={film.title}
+								positive
+								content="Add to faves"
+								onClick={addToFavourites}
+							/>
 						</Card.Content>
 					</Card>
 				))}

@@ -6,28 +6,35 @@ could be ( getting progressively harder):
 
 ## extend current fuctionality
 
-1 wire up the endpoint to display the results for characters just like the films components work.
+1 wire up the endpoint to display the results for characters just like the films components work. ( ie copy/paste )
 
-2 we need pagination also for the results - luckily the json provides a next and previous and a total count of items
+2 we need pagination also for the results - luckily the json provides a next and previous and a total count of items ()
 
 ## favourites UI
 
+    -- there's a faves component but all we can do is add, we can't delete or sort by rating.
 
-3 wire up the favourites UI component to display favourited items
+3 update the removeFave function <code> /features/faves/favesSlice.reducer.removeFave </code> to find and remove the selected favourite from
+the state faves array
 
-4 add ratings functionality to favourited items
+4 add ratings to favourited items 1 - 5 ⭐s ( you can use the ratings or other semantic-ui-react component see docs:
+https://react.semantic-ui.com/ )
 
-5 add sorting of favourites by rating
+5 add a sort filter for favourites by star rating
 
-6 add filters eg type / 1-star 2-star 3-start
+6 add filters to show/ hide fave by start rating et 1⭐ 2⭐⭐ 3 ⭐⭐⭐... up to 5.
 
 # state
 
-7 add a 'remove favouries' button which removes that item from the favourites state slice
+7 It's possible to add the same fave twice, extend the existing addFave function to make sure we're not adding the same fave again
 
-8 add a new state slice for a shopping cart with methods to add, remove, edit items
+8 when updating a fave, we want to relate that fave to any other faves already in the faves array. use the update fave method to add a
+relational array of id strings, relating to an existing other fave, so that they can be grouped or sorted later using the ids of related
+faves.
 
-9 add new RTKQuery API end points for 'vehicles' and 'planets' to services https://swapi.dev/documentation
+9 Looking in <code> /services/swapApi/ </code> there's a method for searching. Create a search that toggles the search category and returns
+results, which on select are then added to the relevant state slice : eg character, is added to 'character' on Search dropdown select. There
+is a working component already, extend it and wire up all potential search types and state slices. https://swapi.dev/documentation
 
 ## performance
 
@@ -82,4 +89,6 @@ https://gitforwindows.org/
 
 https://daveceddia.com/redux-tutorial/
 
-https://www.youtube.com/watch?v=9zySeP5vH9c&t=1513s https://react.semantic-ui.com/
+https://www.youtube.com/watch?v=9zySeP5vH9c&t=1513s
+
+https://react.semantic-ui.com/

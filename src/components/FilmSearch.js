@@ -1,5 +1,4 @@
 import { Dropdown } from 'semantic-ui-react'
-import { useState } from 'react'
 import { debounce } from 'lodash'
 import { nanoid } from '@reduxjs/toolkit'
 import { useGetSearchMutation } from '../services/swapApi'
