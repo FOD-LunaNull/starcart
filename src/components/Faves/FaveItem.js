@@ -6,16 +6,19 @@ import { nanoid } from '@reduxjs/toolkit'
 const FaveItem = ({ fave }) => {
 	const dispatch = useDispatch()
 	/* 
-    ? dispatch the action from the slice to update the rating of the selected fave
+    ? dispatch the action from the faves features slice to update the rating of the selected fave
     */
 	const handleRating = e => {
-		// set rating
-		console.log(e.currentTarget.dataset)
+		/* 
+? set a rating
+ */ console.log(e.currentTarget.dataset)
 	}
-	/* !
-	 * remove the Fave from the list here:
+	const handleRemove = () => {
+		/* 
+	 ? remove the Fave from the list here:
 	 */
-	const handleRemove = () => dispatch(removeFave())
+		dispatch(removeFave())
+	}
 
 	return (
 		<List.Item data-id={fave.id}>
