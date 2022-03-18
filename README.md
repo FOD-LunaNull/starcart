@@ -1,6 +1,6 @@
 ## StarCart
 
-The idea is that a user can search for star wars related stuff, films, people, planets, vehicles, starships. At the moment, the default is
+The idea is that a user create a collection of their favourite star wars related stuff: films, people, planets, vehicles, starships. At the moment, the default is
 to fetch films. you can toggle results, but there's no results yet for characters ( or any of the others ), so some ideas for improvments
 could be ( getting progressively harder):
 
@@ -12,6 +12,7 @@ could be ( getting progressively harder):
 
 2 a) if you want to make a reusable 'hook' you can add custom pagination logic in there b) there is a <Pagination /> component in the
 semantic react ui library
+
 
 ## favourites UI
 
@@ -68,9 +69,7 @@ $rm -rf node_modules
 
 $npm i $npm start
 
-# If for some reason you can’t get the app to spin up then just have a go using ‘ npx create-react-app’ at hitting some of the endpoints, mapping the data and displaying the results as best you can.
-
-# And rather than struggle with something, just email stefan.ingolfsson@fodmobilitygroup.com and I’ll get back to you.
+If for some reason you can’t get the app to spin up then just have a go using ‘ npx create-react-app’ at hitting some of the endpoints, mapping the data and displaying the results as best you can.
 
     -- You are advised to have VS Code, Redux dev tools, Eslint, Prettier, VS Code Chrome Debugger Extensions installed
 
