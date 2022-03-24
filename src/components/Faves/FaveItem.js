@@ -1,4 +1,4 @@
-import { Button, Image, List } from 'semantic-ui-react'
+import { Button, Image, List, Rating } from 'semantic-ui-react'
 import { useDispatch } from 'react-redux'
 import { removeFave, updateFave, rateFave } from '../../features/faves'
 import { nanoid } from '@reduxjs/toolkit'
@@ -8,10 +8,10 @@ const FaveItem = ({ fave }) => {
 	/* 
     ? dispatch the action from the faves features slice to update the rating of the selected fave
     */
-	const handleRating = e => {
+	const handleRating = (_e, data) => {
 		/* 
-? set a rating
- */ console.log(e.currentTarget.dataset)
+	? set a rating
+	*/ console.log('rating data ', data)
 	}
 	const handleRemove = () => {
 		/* 
@@ -27,19 +27,7 @@ const FaveItem = ({ fave }) => {
 				{fave.name} <Button onClick={handleRemove} size="mini" icon={{ name: 'delete', color: 'red' }} basic />
 			</List.Content>
 			<List.Content>
-				{/*
-                    these ratings need to toggle that star rating when user toggles that star  
-                    -- 💡 there is a <Ratings/> component 
-                    -- 💡 onRate method will give num of active icons
-                    
-                    */}
-				{Array.from({ length: Number(fave.rating) }).map((rating, index) => {
-					return (
-						<button key={nanoid()} data-rating={index + 1} onClick={handleRating}>
-							⭐
-						</button>
-					)
-				})}
+				<Rating onRate={handleRating} key={nanoid()} maxRating={5} icon="star" size="mini" rating={fave.rating} />
 			</List.Content>
 		</List.Item>
 	)
