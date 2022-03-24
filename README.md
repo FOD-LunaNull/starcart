@@ -1,14 +1,16 @@
-## StarCart
+# StarCart
 
 The idea is that a user create a collection of their favourite star wars related stuff: films, people, planets, vehicles, starships. At the
 moment, the default is to fetch films. you can toggle results, but there's no results yet for characters ( or any of the others ), so some
-ideas for improvments could be ( getting progressively harder):
+ideas for improvments could be ( getting progressively harder): ======= The idea is that a user can search for star wars related stuff,
+films, people, planets, vehicles, starships. At the moment, the default is to fetch films. you can toggle results, but there's no results
+yet for characters ( or any of the others ), so some ideas for improvements could be ( getting progressively harder):
 
-## extend current fuctionality
+## extend current functionality
 
 1 wire up the endpoint to display the results for characters just like the films components work. ( ie copy/paste )
 
-2 we need pagination also for the results - luckily the json provides a next and previous and a total count of items ()
+2 we need pagination also for the results - luckily the json provides a next and previous and a total count of items
 
 ## favourites UI
 
@@ -19,21 +21,17 @@ the state faves array
 
 4 It's possible to add the same fave twice, extend the existing addFave function to make sure we're not adding the same fave again
 
-4 add ratings to favourited items 1 - 5 ⭐s ( you can use the ratings or other semantic-ui-react component see docs:
-https://react.semantic-ui.com/modules/rating ) 5 add a sort filter for favourites by star rating 6 add filters to show/ hide fave by start
-rating et 1⭐ 2⭐⭐ 3 ⭐⭐⭐... up to 5.
+5 add a sort filter for favourites by star rating
 
-# state
+6 add filters eg type / 1-star 2-star 3-star
 
-7
+## state
 
-8 when updating a fave, we want to relate that fave to any other faves already in the faves array. use the update fave method to add a
-relational array of id strings, relating to an existing other fave, so that they can be grouped or sorted later using the ids of related
-faves.
+7 add a **remove favourites button** which removes that item from the favourites state slice
 
-9 Looking in <code> /services/swapApi/ </code> there's a method for searching. Create a search that toggles the search category and returns
-results, which on select are then added to the relevant state slice : eg character, is added to 'character' on Search dropdown select. There
-is a working component already, extend it and wire up all potential search types and state slices. https://swapi.dev/documentation
+8 add a **new state** slice for a **shopping cart** with methods to add, remove, edit items
+
+9 add new RTKQuery API end points for `vehicles` and `planets` to services https://swapi.dev/documentation
 
 ## performance
 
@@ -41,34 +39,43 @@ is a working component already, extend it and wire up all potential search types
 
 10 add unit tests to key components
 
-12 refactor for peformance and to optimise component rerenders
+12 refactor for performance and to optimise component rerenders
 
-=========== TECH STACK / GETTING STARTED ============
+# TECH STACK / GETTING STARTED
 
-# install vscode git with git bash for windows ( if windows ) / bash
+## install vscode git with git bash for windows ( if windows ) / bash
 
-# install nvm and or node to get the latest version of nodejs 'lts' version
+## install nvm and or node to get the latest version of nodejs 'lts' version
 
-$ nvm install lts $ nvm use 16.14.0 $ npm install -g npm@8.5.4
+```bash
+nvm install lts
+nvm use 16.14.0
+npm install -g npm@8.5.4
+```
 
-# fork repo https://github.com/sjingoFOD/starcart
+## fork repo https://github.com/sjingoFOD/starcart
 
-# install the packages and dependencies and start the app
+## install the packages and dependencies and start the app
 
-$npm i     
-$npm start
+```bash
+npm ci
+npm start
+```
 
 \*\*\* sometimes npm can be buggy, if you need to reinstall packages to clear any errors, then try the following command :
 
-$rm -rf node_modules
+```bash
+rm -rf node_modules
 
-$npm i $npm start
+npm cii
+npm start
+```
 
-If for some reason you can’t get the app to spin up then just have a go using ‘ npx create-react-app’ at hitting some of the endpoints,
-mapping the data and displaying the results as best you can.
+## If for some reason you can’t get the app to spin up then just have a go using ‘ npx create-react-app’ at hitting some of the endpoints, mapping the data and displaying the results as best you can.
+
+# And rather than struggle with something, just email stefan.ingolfsson@fodmobilitygroup.com and I’ll get back to you.
 
     -- You are advised to have VS Code, Redux dev tools, Eslint, Prettier, VS Code Chrome Debugger Extensions installed
-
     -- useful links
 
 https://reactjs.org/
