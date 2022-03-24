@@ -24,7 +24,7 @@ const Films = () => {
 	}
 	if (data && Boolean(data?.results?.length)) {
 		return (
-			<Card.Group>
+			<Card.Group centered>
 				{data.results.map(film => (
 					<Card key={nanoid()}>
 						<Card.Content>
