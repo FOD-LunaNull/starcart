@@ -1,30 +1,38 @@
-import { Header, Divider, Button, Icon } from 'semantic-ui-react'
+import { Header, Divider, Button } from 'semantic-ui-react'
 import { useSelector, useDispatch } from 'react-redux'
 import { selectCurrent, setCurrent } from './../features/app'
 const ShowButtons = () => {
 	const current = useSelector(selectCurrent)
 	const dispatch = useDispatch()
 	const handleUpdateCurrent = selected => dispatch(setCurrent(selected))
+	const buttons = [
+		{
+			name: 'films',
+			icon: 'film',
+		},
+		{
+			name: 'characters',
+			icon: 'users',
+		},
+		{
+			name: 'starships',
+			icon: 'rocket',
+		},
+	]
 	return (
 		<>
-			<Header icon inverted>
-				<Icon name="table" inverted />
-				Show
-			</Header>
+			<Header style={{ display: 'inline-block' }} icon={{ name: 'table', inverted: true }} inverted content="Show" />
 			<Divider hidden />
 			<Button.Group>
-				<Button active={current === 'films'} onClick={() => handleUpdateCurrent('films')}>
-					<Icon name="film" />
-					Films
-				</Button>
-				<Button active={current === 'characters'} onClick={() => handleUpdateCurrent('characters')}>
-					<Icon name="users" />
-					Characters
-				</Button>
-				<Button active={current === 'starships'} onClick={() => handleUpdateCurrent('starships')}>
-					<Icon name="rocket" />
-					Starships
-				</Button>
+				{buttons.map(button => (
+					<Button
+						key={button.name}
+						active={current === button.name}
+						content={button.name}
+						icon={{ name: button.icon }}
+						onClick={() => handleUpdateCurrent(button.name)}
+					/>
+				))}
 			</Button.Group>
 		</>
 	)

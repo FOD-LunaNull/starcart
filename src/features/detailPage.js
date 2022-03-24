@@ -1,15 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = {};
+const initialState = {}
 const CharacterSlice = createSlice({
-  name: "details",
-  initialState,
-  reducers: {
-    setDetails: (state, action) => {
-      state = action.payload;
-      return state;
-    },
-  },
-});
+	name: 'details',
+	initialState,
+	reducers: {
+		setDetails: (state, action) => {
+			state = action.payload
+			return state
+		},
+	},
+})
 
-export const { setCharacter } = CharacterSlice;
+export const { setDetails } = CharacterSlice

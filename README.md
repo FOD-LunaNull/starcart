@@ -6,18 +6,21 @@ could be ( getting progressively harder):
 
 ## extend current functionality
 
-1 wire up the endpoint to display the results for characters just like the films components work.
+1 wire up the endpoint to display the results for characters just like the films components work. ( ie copy/paste )
 
 2 we need pagination also for the results - luckily the JSON provides a next and previous and a total count of items
 
 ## favourites UI
 
+    -- there's a faves component but all we can do is add, we can't delete or sort by rating.
 
-3 wire up the favourites UI component to display favourited items
+3 update the removeFave function <code> /features/faves/favesSlice.reducer.removeFave </code> to find and remove the selected favourite from
+the state faves array
 
-4 add ratings functionality to favourited items
+4 add ratings to favourited items 1 - 5 ⭐s ( you can use the ratings or other semantic-ui-react component see docs:
+https://react.semantic-ui.com/ )
 
-5 add sorting of favourites by rating
+5 add a sort filter for favourites by star rating
 
 6 add filters eg type / 1-star 2-star 3-star
 
@@ -70,7 +73,6 @@ npm start
 ## If for some reason you can’t get the app to spin up then just have a go using ‘ npx create-react-app’ at hitting some of the endpoints, mapping the data and displaying the results as best you can.
 
 # And rather than struggle with something, just email stefan.ingolfsson@fodmobilitygroup.com and I’ll get back to you.
-
     -- You are advised to have VS Code, Redux dev tools, Eslint, Prettier, VS Code Chrome Debugger Extensions installed
 
     -- useful links
@@ -91,4 +93,6 @@ https://gitforwindows.org/
 
 https://daveceddia.com/redux-tutorial/
 
-https://www.youtube.com/watch?v=9zySeP5vH9c&t=1513s https://react.semantic-ui.com/
+https://www.youtube.com/watch?v=9zySeP5vH9c&t=1513s
+
+https://react.semantic-ui.com/

@@ -8,6 +8,7 @@ import FilmDetails from './FilmDetails'
 const Films = () => {
 	const { data, isError, isLoading } = useGetFilmsQuery()
 	const dispatch = useDispatch()
+
 	const selectFilm = e => {
 		const { title } = e.currentTarget.dataset
 		const film = data.results.find(film => film.title === title)
@@ -33,7 +34,13 @@ const Films = () => {
 						</Card.Content>
 						<Card.Content extra>
 							<FilmDetails details={film} />
-							<Button data-title={film.title} positive content="Add to favourites" onClick={addToFavourites} />
+							<Button
+								icon={{ name: 'plus', size: 'small' }}
+								data-title={film.title}
+								positive
+								content="Add to faves"
+								onClick={addToFavourites}
+							/>
 						</Card.Content>
 					</Card>
 				))}
