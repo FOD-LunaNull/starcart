@@ -21,7 +21,7 @@ const ShowButtons = () => {
 	]
 	return (
 		<>
-			<Header style={{ display: 'inline-block' }} icon={{ name: 'table', inverted: true }} inverted content="Star Cart" />
+			<Header inverted style={{ display: 'inline-block' }} icon={{ name: 'table' }} content="Star Cart" />
 			<Divider hidden />
 			<Button.Group>
 				{buttons.map(button => (

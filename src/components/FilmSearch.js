@@ -34,7 +34,6 @@ const FilmSearch = () => {
 			search
 			selection
 			onChange={handleChange}
-			inverted
 			options={options}
 		/>
 	)

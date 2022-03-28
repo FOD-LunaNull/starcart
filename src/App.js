@@ -9,15 +9,15 @@ function App() {
 	const current = useSelector(selectCurrent)
 	return (
 		<>
-			<Container fluid inverted>
+			<Container fluid>
 				<Segment inverted>
 					<Header as="h1" content="Star Cart 🚀" />
-					<Menu large pointing secondary></Menu>
+					<Menu pointing secondary></Menu>
 					<Main />
 				</Segment>
 			</Container>
 			<Container>
-				<Segment fluid>
+				<Segment>
 					{current === 'films' && <Films />}
 					{current === 'characters' && <Characters />}
 				</Segment>

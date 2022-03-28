@@ -7,7 +7,7 @@ const Main = () => {
 			<Grid.Row>
 				<Faves />
 			</Grid.Row>
-			<Grid.Row verticalAlign="middle" inverted>
+			<Grid.Row verticalAlign="middle">
 				<Grid.Column>
 					<ShowButtons />
 				</Grid.Column>

@@ -3,8 +3,8 @@ import SearchApi from './SearchApi'
 
 const Search = () => (
 	<>
-		<Header icon inverted>
-			<Icon name="search" inverted />
+		<Header icon>
+			<Icon name="search" />
 			Search
 		</Header>
 		<SearchApi />
