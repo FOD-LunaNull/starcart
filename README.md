@@ -2,9 +2,7 @@
 
 The idea is that a user create a collection of their favourite star wars related stuff: films, people, planets, vehicles, starships. At the
 moment, the default is to fetch films. you can toggle results, but there's no results yet for characters ( or any of the others ), so some
-ideas for improvments could be ( getting progressively harder): ======= The idea is that a user can search for star wars related stuff,
-films, people, planets, vehicles, starships. At the moment, the default is to fetch films. you can toggle results, but there's no results
-yet for characters ( or any of the others ), so some ideas for improvements could be ( getting progressively harder):
+ideas for improvments could be ( getting progressively harder):
 
 ## extend current functionality
 
@@ -35,9 +33,9 @@ the state faves array
 
 ## performance
 
-11 add basic Typescript support
+11 add basic Typescript support to the FaveItem component
 
-10 add unit tests to key components
+10 add unit tests to the FaveItem
 
 12 refactor for performance and to optimise component rerenders
 
