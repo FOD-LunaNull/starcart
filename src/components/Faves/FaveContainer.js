@@ -1,9 +1,7 @@
-import { Button, Image, List, Rating } from 'semantic-ui-react'
 import { useDispatch } from 'react-redux'
-import { removeFave, updateFave, rateFave } from '../../features/faves'
-import { nanoid } from '@reduxjs/toolkit'
-
-const FaveItem = ({ fave }) => {
+import { removeFave } from '../../features/faves'
+import FaveItem from './FaveItem'
+const FaveContainer = ({ fave }) => {
 	const dispatch = useDispatch()
 	/* 
     ? dispatch the action from the faves features slice to update the rating of the selected fave
@@ -17,9 +15,9 @@ const FaveItem = ({ fave }) => {
 		/* 
 	 ? remove the Fave from the list here:
 	 */
-		dispatch(removeFave())
+		dispatch(removeFave(fave.id))
 	}
 
-	return <FaveItem fave={fave} key={nanoid()} />
+	return <FaveItem fave={fave} handleRating={handleRating} handleRemove={handleRemove} />
 }
-export default FaveItem
+export default FaveContainer

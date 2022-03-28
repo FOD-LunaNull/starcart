@@ -1,7 +1,7 @@
 import { Button, Image, List, Rating } from 'semantic-ui-react'
 
 const FaveItem = ({ fave, handleRating, handleRemove }) => (
-	<List.Item data-id={fave.id}>
+	<List.Item>
 		<Image avatar src="avatar.jpg" />
 		<List.Content>
 			{fave.name} <Button onClick={handleRemove} size="mini" icon={{ name: 'delete', color: 'red' }} basic />

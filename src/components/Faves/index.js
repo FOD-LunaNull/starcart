@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { List, Message } from 'semantic-ui-react'
 import { selectFaveState } from '../../features/faves'
-import FaveItem from './FaveItem'
+import Fave from './FaveContainer'
 
 const Faves = () => {
 	const faves = useSelector(selectFaveState)
@@ -11,7 +11,7 @@ const Faves = () => {
 	return (
 		<List horizontal divided>
 			{faves.map(fave => (
-				<FaveItem key={fave.id} fave={fave} />
+				<Fave key={fave.id} fave={fave} />
 			))}
 		</List>
 	)
