@@ -21,17 +21,21 @@ export const favesSlice = createSlice({
 			// find fave
 			// update fave with array of ids if none exists,
 			// or add related id if doesn't exist in array already
+			// return state
 		},
 		rateFave: (state, action) => {
 			// find fave
 			// update new on that fave
+			// return state
 		},
 		removeFave: (state, action) => {
-			// const selectedFave = action.payload
+			// const id = action.payload
 			console.log('faves', current(state))
 			/*
 			 ! remove fave code here */
-			// state.faves = ... //
+			/*
+			 * make sure to return the whole state because it's just a single array of faves */
+			// return state.???
 		},
 	},
 })
