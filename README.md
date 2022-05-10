@@ -19,25 +19,22 @@ the state faves array
 
 4 It's possible to add the same fave twice, extend the existing addFave function to make sure we're not adding the same fave again
 
-5 add a sort filter for favourites by star rating
+## typescript and testing
 
-6 add filters eg type / 1-star 2-star 3-star
+5 update the interface in the FaveItem component so that typescript is happy
 
-## state
+6 update the unit test to test the input/output of the FaveItem
 
-7 add a **remove favourites button** which removes that item from the favourites state slice
+## redux
 
-8 add a **new state** slice for a **shopping cart** with methods to add, remove, edit items
+7 create a new slice of state for a future shopping cart we're going to add later with addCartItem, removeCartItem and editCartItem methods
+and make sure that each item when added has a unique id
+
+## ... for funzies ...
+
+8 add filters eg type / 1-star 2-star 3-star
 
 9 add new RTKQuery API end points for `vehicles` and `planets` to services https://swapi.dev/documentation
-
-## performance
-
-11 add basic Typescript support to the FaveItem component
-
-10 add unit tests to the FaveItem
-
-12 refactor for performance and to optimise component rerenders
 
 # TECH STACK / GETTING STARTED
 

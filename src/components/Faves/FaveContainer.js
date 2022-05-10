@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { removeFave } from '../../features/faves'
-import FaveItem from './FaveItem'
+import FaveItem from './FaveItem.tsx'
 const FaveContainer = ({ fave }) => {
 	const dispatch = useDispatch()
 	/* 
