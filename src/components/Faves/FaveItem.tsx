@@ -1,15 +1,14 @@
-import { SyntheticEvent } from 'react'
-import { Button, ButtonProps, List, Rating } from 'semantic-ui-react'
+ import { Button,   List, Rating, } from 'semantic-ui-react'
 
-interface FaveItemProps {
-	handleRemove: (_e: SyntheticEvent, data: ButtonProps) => void
-	fave: any
-	handleRating: any
-}
+ interface Props{
+	 fave:any;
+	 handleRating:any;
+	 handleRemove:any;
+ }
 
-const FaveItem = ({ fave, handleRating, handleRemove }: FaveItemProps): JSX.Element => (
+const FaveItem = ({ fave, handleRating, handleRemove }:Props)=> (
 	<List.Item>
-		<img src="avatar.jpg" alt="avatar" />
+		<img className='ui mini circular image' src="avatar.jpg" alt="avatar" />
 		<List.Content>
 			{fave.name} <Button onClick={handleRemove} size="mini" icon={{ name: 'delete', color: 'red' }} basic />
 		</List.Content>

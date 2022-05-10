@@ -21,7 +21,15 @@ the state faves array
 
 ## typescript and testing
 
-5 update the interface in the FaveItem component so that typescript is happy
+5 change the FaveItemProps interface in the FavesItem component from any so that it satisfies the typescript compiler
+
+remove the 'any' and add the correct type interface Props{
+	 fave:any;
+	 handleRating:any;
+	 handleRemove:any;
+ }
+
+
 
 6 update the unit test to test the input/output of the FaveItem
 
@@ -35,6 +43,8 @@ and make sure that each item when added has a unique id
 8 add filters eg type / 1-star 2-star 3-star
 
 9 add new RTKQuery API end points for `vehicles` and `planets` to services https://swapi.dev/documentation
+
+10 
 
 # TECH STACK / GETTING STARTED
 

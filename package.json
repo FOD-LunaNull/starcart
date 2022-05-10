@@ -47,6 +47,8 @@
     "@types/react-dom": "^18.0.3",
     "@types/semantic-ui": "^2.2.7",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint": "^8.15.0",
     "lodash": "^4.17.21",
     "typescript": "^4.6.4"
   }
